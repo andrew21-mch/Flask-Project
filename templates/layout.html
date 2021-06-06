@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+
+            ul{ 
+                overflow-x:hidden;
+                white-space:nowrap;
+                } 
+                
+            li
+                { 
+                display:inline; 
+                padding: 5px;
+                list-style-type: none;
+                float: right;
+                } 
+            .nav-bar{
+                background-color:blue;
+                padding-top: 9px;
+                padding-bottom: 9px;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+     
+            }
+        </style>
         {%if title%}
             <title> Flask blog - {{title}} </title>
         {%else%}
@@ -9,6 +34,13 @@
      </head>
 
      <body>
+         <nav class="nav-bar">
+             <ul>
+                 <li><a href="{{url_for('home')}}">HOME</a></li>
+                 <li><a href="{{url_for('About')}}">ABOUT</a></li>
+                 <li><a href="{{url_for("register")}}">REGISTER</a></li>
+             </ul>
+         </nav>
         <center><div>
             {%block content %} {% endblock content %}
         </div>
