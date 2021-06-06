@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div  style="width: 230px; height: 300px; background-color: rgb(140, 140, 243); margin-top: 40px">
+        <form method="POST"  action="">
+            {{form.hidden_tag()}}
+            <fieldset>
+                <legend>
+                    Join Today
+                </legend>
+                <div>
+                    {{form.username.label}}
+                    {{form.username}}
+                </div>
+                <div>
+                    {{form.email.label}}
+                    {{form.email}}
+                </div>
+                <div>
+                    {{form.password.label}}
+                    {{form.password}}
+                </div>
+                <div>
+                    {{form.password_repeat.label}}
+                    {{form.password_repeat}}
+                </div>
+            </fieldset><br><br><br>
+            <div>
+                {{form.submit}}
+            </div>
+
+        </form>
+    </div>
+    <div>
+        <small>
+            Already Have An Account? <a href="{{url_for('login')}}">Sign In</a>
+        </small>
+    </div>
+{%endblock content%}
