@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
-
-    {%if title%}
-        <title> Flask blog -- {{title}}
-    {%else%}
-        <title> Flask Blog - {{title}}</title>
-    {%endif%}
+        {%if title%}
+            <title> Flask blog - {{title}} </title>
+        {%else%}
+            <title> Flask Blog </title>
+        {%endif%}
      </head>
 
      <body>
-        <div class="container">
-            {%block content %}{% endblock %}
+        <center><div>
+            {%block content %} {% endblock content %}
         </div>
-     </body>
+     </body></center>
 </html>
