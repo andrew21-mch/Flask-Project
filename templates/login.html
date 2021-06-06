@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{%block content%}
+<div  style="width: 230px; height: 250px; background-color: rgb(140, 140, 243); margin-top: 40px">
+    <form action="" method="POST">
+        {{form.hidden_tag()}}
+        <fieldset>
+            <legend>
+               Login
+            </legend>
+            <div>
+                {{form.email.label}}
+                {{form.email}}
+            </div>
+            <div>
+                {{form.password.label}}
+                {{form.password}}
+            </div>
+        </fieldset> <br><br>
+        <div>
+            {{form.submit}}
+        </div>
+
+    </form>
+</div>
+<div>
+    <small>
+        Already Have An Account? <a href="{{ url_for('login') }}">Sign In</a>
+    </small>
+</div>
+{%endblock content%}
